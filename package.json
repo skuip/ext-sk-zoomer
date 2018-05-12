@@ -1,8 +1,9 @@
 {
-  "dependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-stylus": "^1.2.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-eslint": "^19.0.0"
-  }
+	"dependencies": {
+		"grunt": "*",
+		"grunt-contrib-stylus": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-eslint": "*",
+		"grunt-zip": "*"
+	}
 }
