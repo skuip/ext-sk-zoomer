@@ -1,5 +1,3 @@
-/* global chrome, document, window */
-
 (function() {
 	let stats = getFontSizeStatistics();
 
@@ -11,10 +9,10 @@
 	let reqXHeight = 16;
 
 	function handleOnMessage (data, sender, sendResponse) {
+		sendResponse(`OK`);
+
 		let div;
 		let styles;
-
-		sendResponse({});
 
 		reqXHeight = data.xHeight;
 
@@ -71,6 +69,8 @@
 	}
 
 	function logStatistics () {
+		chrome.runtime.sendMessage({ zoom: actualZoom, finished: true });
+
 		return console.log(
 			`SK-Zoomer: Requested x-height: ` + reqXHeight +
 			`px font-size: ` + mainFontSize + `px x-height: ` + xHeight.toFixed(2) +
@@ -125,3 +125,5 @@
 	// Listen for messages from the background process.
 	chrome.runtime.onMessage.addListener(handleOnMessage);
 })();
+
+`OK`;

@@ -4,6 +4,13 @@
 		"es6": true,
 		"webextensions": true
 	},
+	"extends": [
+		"eslint:recommended",
+	],
+	"parserOptions": {
+		"ecmaVersion": 9,
+		"sourceType": "module"
+	},
 	"rules": {
 		// Best Practices
 		// These are rules designed to prevent you from making mistakes. They either prescribe a better way of doing something or help you avoid footguns.
